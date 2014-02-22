@@ -101,17 +101,17 @@
 #friendsApp.km-flat form .km-listgroupinset .km-list > li:first-child {
     border-width: 0 0 1px;
     border-color: #eaeced;
-    -webkit-border-radius: 2px 2px 0 0;
-    -moz-border-radius: 2px 2px 0 0;
-    border-radius: 2px 2px 0 0;
+    -webkit-border-radius: 1px 1px 0 0;
+    -moz-border-radius: 1px 1px 0 0;
+    border-radius: 1px 1px 0 0;
 }
 
 #friendsApp.km-flat form .km-listinset > li:last-child,
 #friendsApp.km-flat form .km-listgroupinset .km-list > li:last-child {
     border: 0 none;
-    -webkit-border-radius: 0 0 2px 2px;
-    -moz-border-radius: 0 0 2px 2px;
-    border-radius: 0 0 2px 2px;
+    -webkit-border-radius: 0 0 1px 1px;
+    -moz-border-radius: 0 0 1px 1px;
+    border-radius: 0 0 1px 1px;
 }
 
 #friendsApp.km-flat .km-list input[type="text"]:not(.k-input),
@@ -138,7 +138,7 @@
     padding: .6em 0;
     border: 0 none;
     font-size: 1.2rem;
-    background-color: #3598db;
+    background-color: #3498db;
 }
 
 #friendsApp .disabled .btn {
@@ -147,7 +147,7 @@
 
 #friendsApp .btn-login,
 #friendsApp .signup-view .btn-signup {
-    background-color: #1bbc9b;
+    background-color: #2ecc71;
 }
 
 #friendsApp .signup-view .btn-signup,
@@ -343,16 +343,16 @@
 /* Signup */
 
 #friendsApp .signup-view .select-wrp {
-    -webkit-border-radius: 0 0 2px 2px;
-    -moz-border-radius: 0 0 2px 2px;
-    border-radius: 0 0 2px 2px;
+    -webkit-border-radius: 0 0 1px 1px;
+    -moz-border-radius: 0 0 1px 1px;
+    border-radius: 0 0 1px 1px;
 }
 
 #friendsApp.km-flat .signup-view .km-listinset > li:last-child {
     margin: .5em 0 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
 }
 
 #friendsApp .txtarea-wrp textarea {

@@ -525,7 +525,7 @@
 (min-resolution: 144dpi) { 
     
     #friendsApp .app-logo {
-        background-image: url(images/logo-telerik_devcloud@2x.png);
+        background-image: url(images/bugoy.png);
         background-size: 247px 32px;
     }
     

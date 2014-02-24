@@ -22,58 +22,7 @@
         <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800" rel="stylesheet" type="text/css" />
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
-        <script type="text/javascript" charset="utf-8">
-
-            var g_overlay = false;
-            var g_color = "white";
-
-            // Wait for Cordova to load
-            //
-            document.addEventListener("deviceready", onDeviceReady, false);
-
-            // Cordova is ready
-            //
-            function onDeviceReady() {
-                // add any initialization code here
-            }
-
-            function showStatusBar(show) {
-                if (show) {
-                    StatusBar.show();
-                    StatusBar.overlaysWebView(g_overlay)
-                }
-                else
-                    StatusBar.hide();
-            }
-
-            function overlayWebView(isOverlay) {
-                g_overlay = isOverlay;
-                StatusBar.overlaysWebView(g_overlay);
-            }
-
-            function setColor(inColor) {
-                g_color = inColor
-                StatusBar.backgroundColorByName(g_color);
-
-                if (g_color === "black")
-                    StatusBar.styleLightContent();
-            }
-
-            function defaultStyle() {
-                g_color = "white"
-                StatusBar.styleDefault();
-                StatusBar.backgroundColorByName(g_color);
-            }
-
-            function lightContent() {
-                StatusBar.styleLightContent();
-                if (g_color === "white") {
-                    g_color = "black";
-                    StatusBar.backgroundColorByName(g_color);
-                }
-            }
-
-        </script>
+        
     </head>
     <body id="friendsApp">
         <section data-role="layout" data-id="default">
@@ -130,5 +79,61 @@
             <p><a href="#" onclick="lightContent(); return false;">Light Content Status Bar</a></p>
             <p><a href="#" onclick="defaultStyle(); return false;">Default Status Bar Style</a></p>
         </div>
+        <script type="text/javascript" charset="utf-8">
+
+            var g_overlay = false;
+            var g_color = "white";
+
+            // Wait for Cordova to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // Cordova is ready
+            //
+            function onDeviceReady() {
+                // add any initialization code here
+            }
+
+            function showStatusBar(show) {
+                if (show) {
+                    StatusBar.show();
+                    StatusBar.overlaysWebView(g_overlay)
+                }
+                else
+                    StatusBar.hide();
+            }
+
+            function overlayWebView(isOverlay) {
+                g_overlay = isOverlay;
+                StatusBar.overlaysWebView(g_overlay);
+            }
+
+            function setColor(inColor) {
+                g_color = inColor
+                StatusBar.backgroundColorByName(g_color);
+
+                if (g_color === "black")
+                    StatusBar.styleLightContent();
+            }
+
+            function defaultStyle() {
+                g_color = "white"
+                StatusBar.styleDefault();
+                StatusBar.backgroundColorByName(g_color);
+            }
+
+            function lightContent() {
+                StatusBar.styleLightContent();
+                if (g_color === "white") {
+                    g_color = "black";
+                    StatusBar.backgroundColorByName(g_color);
+                }
+            }
+
+        </script>
     </body>
+
+
+
+
 </html>

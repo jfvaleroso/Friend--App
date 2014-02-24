@@ -22,7 +22,9 @@
         <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800" rel="stylesheet" type="text/css" />
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
-        
+        <script>
+            StatusBar.backgroundColorByName('red');
+        </script>
     </head>
     <body id="friendsApp">
         <section data-role="layout" data-id="default">
@@ -66,71 +68,9 @@
 
             <div data-role="footer"><p>&copy; <span data-bind="text: getYear"></span> Bugoy Inc.</p></div>
 
-            <p><a href="#" onclick="showStatusBar(false); return false;">Hide Status Bar</a></p>
-            <p><a href="#" onclick="showStatusBar(true); return false;">Show Status Bar</a></p>
-
-            <p><a href="#" onclick="setColor('red'); return false;">Red Status Bar</a></p>
-            <p><a href="#" onclick="setColor('blue'); return false;">Blue Status Bar</a></p>
-            <p><a href="#" onclick="setColor('black'); return false;">Black Status Bar</a></p>
-
-            <p><a href="#" onclick="overlayWebView(true); return false;">Status Bar Overlays WebView</a></p>
-            <p><a href="#" onclick="overlayWebView(false); return false;">Status Bar sits above WebView</a></p>
-
-            <p><a href="#" onclick="lightContent(); return false;">Light Content Status Bar</a></p>
-            <p><a href="#" onclick="defaultStyle(); return false;">Default Status Bar Style</a></p>
+          
         </div>
-        <script type="text/javascript" charset="utf-8">
-
-            var g_overlay = false;
-            var g_color = "white";
-
-            // Wait for Cordova to load
-            //
-            document.addEventListener("deviceready", onDeviceReady, false);
-
-            // Cordova is ready
-            //
-            function onDeviceReady() {
-                // add any initialization code here
-            }
-
-            function showStatusBar(show) {
-                if (show) {
-                    StatusBar.show();
-                    StatusBar.overlaysWebView(g_overlay)
-                }
-                else
-                    StatusBar.hide();
-            }
-
-            function overlayWebView(isOverlay) {
-                g_overlay = isOverlay;
-                StatusBar.overlaysWebView(g_overlay);
-            }
-
-            function setColor(inColor) {
-                g_color = inColor
-                StatusBar.backgroundColorByName(g_color);
-
-                if (g_color === "black")
-                    StatusBar.styleLightContent();
-            }
-
-            function defaultStyle() {
-                g_color = "white"
-                StatusBar.styleDefault();
-                StatusBar.backgroundColorByName(g_color);
-            }
-
-            function lightContent() {
-                StatusBar.styleLightContent();
-                if (g_color === "white") {
-                    g_color = "black";
-                    StatusBar.backgroundColorByName(g_color);
-                }
-            }
-
-        </script>
+        
     </body>
 
 
